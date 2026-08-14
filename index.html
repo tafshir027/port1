@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/x-icon" href="icon.png"> 
+  <link rel="icon" type="image/x-icon" href="icon.png"> 
   <!-- SEO / META TAGS (unchanged) -->
   <title>Rufaida Rashid | Frontend Web Developer</title>
   <meta name="description" content="Rufaida Rashid — Frontend Web Developer with 2 years of experience building responsive, user-friendly websites using HTML5, CSS3, Tailwind CSS, JavaScript and Bootstrap. Based in Dhaka, Bangladesh.">
@@ -259,20 +259,28 @@
       gap: var(--sp-6);
       align-items:start;
     }
+    /* Updated: image placeholder instead of text "RR" */
     .about-photo{
       width: 100%;
       aspect-ratio: 1/1;
       border-radius: var(--radius);
       background: linear-gradient(155deg, var(--color-primary), var(--color-surface));
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-family: var(--font-heading);
-      font-size: 4rem;
-      font-weight:800;
-      color: var(--color-accent);
+      overflow: hidden;
       border: 1px solid var(--color-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
       user-select:none;
+    }
+    .about-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .about-photo:hover img {
+      transform: scale(1.03);
     }
     .about-text p{
       color: var(--color-text-muted);
@@ -690,13 +698,16 @@
   </div>
 </section>
 
-<!-- ABOUT (unchanged) -->
+<!-- ABOUT (updated with image) -->
 <section id="about" class="alt-bg">
   <div class="container">
     <span class="section-label fade-in">Get To Know Me</span>
     <h2 class="section-title fade-in">About <span>Me</span></h2>
     <div class="about-grid">
-      <div class="about-photo fade-in" aria-label="Rufaida Rashid">RR</div>
+      <!-- Image placeholder instead of RR text -->
+      <div class="about-photo fade-in" aria-label="Rufaida Rashid photo">
+        <img src="RufaidaRashid.png" alt="Portrait of Rufaida Rashid">
+      </div>
       <div class="about-text">
         <p class="fade-in">Highly motivated Frontend Web Developer with a strong foundation in Electrical and Electronic Engineering. Adept at building responsive, user friendly, and visually appealing websites.</p>
         <p class="fade-in">Specialized in creating custom portfolio websites and deploying them seamlessly using modern version control and hosting platforms.</p>
